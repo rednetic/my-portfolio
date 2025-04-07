@@ -1,0 +1,29 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #121212;
+}
+.bg-dark-blue {
+  background-color: #12102D;
+}
+.bg-light-grey {
+  background-color: #f4f4f4;
+}
+.hero-section {
+  background: url('../images/hero.jpg') center/cover no-repeat;
+  height: 60vh;
+}
+h1, h2, h3, h5 {
+  color: #121212;
+}
+.btn-danger {
+  background-color: #E52044;
+  border-color: #E52044;
+}
+.btn-danger:hover {
+  background-color: #c01b37;
+  border-color: #c01b37;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(229,32,68, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
