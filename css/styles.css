@@ -1,29 +1,122 @@
 
+:root {
+  /* Primary (Blues) */
+  --primary-100: #2563EB;
+  --primary-200: #598EF3;
+  --primary-300: #D3E6FE;
+
+  /* Salmon (Accent) */
+  --accent-100: #FF6B6B;
+  --accent-200: #FFBBBB;
+
+  /* Text Colours */
+  --text-100: #FCFCFC;
+  --text-200: #CBD5E1;
+  --text-300: #94A3B8;
+
+  /* Backgrounds */
+  --bg-100: #162132;
+  --bg-200: #1E293B;
+  --bg-300: #334155;
+  --bg-400: #3A5071;
+  --bg-500: #475569;
+
+
+
+}
+
+/* Fonts: Abrade + Advent Pro */
+@font-face {
+  font-family: 'Abrade';
+  src: url('../fonts/dehinted-subset-Abrade-Medium.woff2') format('woff2'),
+       url('../fonts/dehinted-subset-Abrade-Medium.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Abrade-Book';
+  src: url('../fonts/dehinted-subset-Abrade-Book.woff2') format('woff2'),
+       url('../fonts/dehinted-subset-Abrade-Book.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global Typography */
 body {
-  font-family: 'Poppins', sans-serif;
-  color: #121212;
+  font-family: 'Abrade-Book', sans-serif;
+  color: var(--text-100);
+  background-color: var(--bg-100);
 }
-.bg-dark-blue {
-  background-color: #12102D;
+
+/* Bold/Medium text — semantic use of <strong> */
+strong {
+  font-family: 'Abrade', sans-serif;
+
 }
-.bg-light-grey {
-  background-color: #f4f4f4;
+
+/* Headings use Advent Pro */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 600;
+  color: var(--text-100);
 }
-.hero-section {
-  background: url('../images/hero.jpg') center/cover no-repeat;
-  height: 60vh;
+
+h1 {
+  font-size: 96px;
+  line-height: 1.2;
 }
-h1, h2, h3, h5 {
-  color: #121212;
+
+h2 {
+  font-size: 64px;
+	font-weight: 300;
+	line-height: 106%;
+	color:  var(--primary-300)
 }
-.btn-danger {
-  background-color: #E52044;
-  border-color: #E52044;
+
+h3 {
+ font-size: 32px;
+color:  var(--primary-200)
 }
-.btn-danger:hover {
-  background-color: #c01b37;
-  border-color: #c01b37;
+
+h4, h5, h6 {
+  font-size: 40px;
+	font-weight: 300;
+}
+
+p {
+	font-weight: 200;
 }
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(229,32,68, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,107,107, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+ .hero-section {
+      background: url('../images/hero.jpg') center/cover no-repeat;
+      height: 30vh;
+    }
+.hero-h4 {
+	padding: 10px;
+	  background-color: var(--bg-100);
+}
+
+.section-1 {
+  background-color: var(--primary-100);
+}
+
+.section-2 {
+  background-color: var(--bg-200);
+}
+
+.section-3 {
+  background-color: var(--bg-500);
+}
+
+.section-4 {
+  background-color: var(--bg-300);
+}
+
+.section-5 {
+  background-color: var(--primary-100);
+}
+
