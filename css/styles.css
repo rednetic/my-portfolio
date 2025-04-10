@@ -93,7 +93,7 @@ p {
 
  .hero-section {
       background: url('../images/hero.jpg') center/cover no-repeat;
-      height: 30vh;
+      height: 400px;
     }
 .hero-h4 {
 	padding: 10px;
