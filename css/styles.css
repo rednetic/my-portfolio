@@ -49,6 +49,7 @@ body {
   font-family: 'Abrade-Book', sans-serif;
   color: var(--text-100);
   background-color: var(--bg-100);
+  padding-top: 80px; /* Adjust based on your navbar height */
 }
 
 strong {
@@ -88,6 +89,11 @@ p {
 }
 
 /* Navbar */
+
+.navbar {
+	  background-color: var(--bg-200);
+}
+
 .navbar-nav {
   display: flex;
   gap: 0.2rem;
