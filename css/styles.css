@@ -87,6 +87,36 @@ h4, h5, h6 {
 p {
   font-weight: 200;
 }
+a {
+  position: relative;
+  color: var(--accent-100); /* salmon pink */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Custom underline on hover */
+a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px; /* adjust spacing */
+  height: 1px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Setup invisible ::after to prevent layout shift */
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
 
 /* Navbar */
 
