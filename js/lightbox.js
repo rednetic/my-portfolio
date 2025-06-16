@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeBtn = document.getElementById('lightbox-close');
 
   function closeOverlay() {
-    overlay.style.display = 'flex';
+      overlay.classList.add('active');
     overlay.classList.add('closing');
     setTimeout(() => {
-      overlay.style.display = 'none';
-      overlayImg.src = '';
+        overlay.classList.remove('active');
+        overlayImg.src = '';
       document.body.classList.remove('no-scroll');
       overlay.classList.remove('closing');
     }, 150); // Optional: for a fade-out effect
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   images.forEach(img => {
     img.addEventListener('click', function () {
       overlayImg.src = this.src;
-      overlay.style.display = 'flex';
+        overlay.classList.add('active');
       document.body.classList.add('no-scroll');
     });
   });
