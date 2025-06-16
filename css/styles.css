@@ -205,10 +205,21 @@ a::after {
 }
 
 /* Hero */
-.hero-section {
+.hero-section-ly {
+  background: url('../images/ly-hero.png') center/cover no-repeat;
+  height: 300px;
+}
+
+.hero-section-gc {
   background: url('../images/hero.jpg') center/cover no-repeat;
   height: 300px;
 }
+
+.hero-section-jl {
+  background: url('../images/jl-hero.png') center/cover no-repeat;
+  height: 300px;
+}
+
 
 .hero-h2-block {
   display: inline-block !important;
