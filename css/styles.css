@@ -65,6 +65,17 @@ body {
   padding-top: 80px; /* Adjust based on your navbar height */
 }
 
+.text-link {
+ color: white;
+ text-decoration: underline;
+}
+
+.section-blue {
+  min-height: 100vh;     /* fill full viewport height */
+  display: flex;         /* activate flexbox */
+  align-items: center;   /* vertical centering */
+}
+
 .intro-text {
   font-size: 20px;
 }
