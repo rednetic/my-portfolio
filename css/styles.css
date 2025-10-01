@@ -70,7 +70,7 @@ body {
  text-decoration: underline;
 }
 
-.section-blue {
+.home-text {
   min-height: 100vh;     /* fill full viewport height */
   display: flex;         /* activate flexbox */
   align-items: center;   /* vertical centering */
