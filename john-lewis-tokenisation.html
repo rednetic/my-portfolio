@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Mark Streatfield Portfolio – John Lewis – Case Study: Tokens for Theming</title>
+  <meta name="description" content="How we evolved the John Lewis design system using tokens to enable theming, accessibility, and multi-brand scalability."/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/jvz8pfp.css">
+  <link rel="stylesheet" href="css/styles.css"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="images/favicon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180x180.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mark Streatfield Portfolio – John Lewis – Tokens for Theming">
+  <meta property="og:description" content="How we evolved the John Lewis design system using tokens to enable theming, accessibility, and multi-brand scalability.">
+  <meta property="og:image" content="https://mark-streatfield.com/images/jl-tokens-cover.jpg">
+  <meta property="og:url" content="https://mark-streatfield.com/john-lewis-tokenisation.html">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mark Streatfield Portfolio – John Lewis – Tokens for Theming">
+  <meta name="twitter:description" content="How we evolved the John Lewis design system using tokens to enable theming, accessibility, and multi-brand scalability.">
+  <meta name="twitter:image" content="https://mark-streatfield.com/images/jl-tokens-cover.jpg">
+</head>
+
+ <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-4 nav-padding">
+   <a class="navbar-brand d-flex align-items-center" href="./"><img loading="lazy" decoding="async" src="images/dms-logo.svg" alt="Logo" height="32"></a>
+
+   <button class="navbar-toggler border-0 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-lg-center">
+  <li class="nav-item dropdown">
+  <a class="nav-link selected dropdown-toggle" href="john-lewis.html" id="jlDropdown"
+     role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+    John Lewis
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="jlDropdown">
+    <li><a class="dropdown-item" href="john-lewis.html">Overview</a></li>
+    <li><a class="dropdown-item" href="john-lewis-dark-mode.html">Case Study: Dark Mode</a></li>
+    <li><a class="dropdown-item" href="john-lewis-messaging.html">Case Study: Messaging</a></li>
+        <li><a class="dropdown-item" href="john-lewis-tokenisation.html">Case Study: Tokens for Theming</a></li>
+    <!-- Optional divider
+    <li><hr class="dropdown-divider"></li>
+    -->
+  </ul>
+</li>
+
+        <li class="nav-item">
+         <a class="nav-link" href="ground-control.html">
+          Ground Control
+         </a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link " href="lymited.html">
+          Lymited
+         </a>
+        </li>
+ 
+     <li class="nav-item">
+      <a class="nav-link" href="Mark_Streatfield_CV_April_2025.pdf">
+       CV
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="https://www.linkedin.com/in/mark-streatfield/" target="_blank" rel="noopener">
+       LinkedIn
+      </a>
+     </li>
+	
+
+    </ul>
+   </div>
+  </nav>
+  
+  
+  <main>
+<!-- Hero Section -->
+  <header class="hero-case-study-section d-flex align-items-start align-items-md-top justify-content-left text-left py-5 pt-md-6 px-4 px-md-5">
+   <div class="container px-0 px-md-5">
+	   	<div class="section row px-3 px-md-5" role="region" aria-labelledby="sec-1-title">
+       <h2 class="hero-case-study-h2" id="sec-1-title"><span class="hero-case-study-h2-block">Case Study: John Lewis</span>
+    </h2>
+    
+     <h1 class="mb-3 text-white">
+     Tokens for Theming
+    </h1>
+			
+
+   		</div>
+	</div>
+  </header>
+   <!-- Main Sections -->
+  <div class="container">
+	
+	   <!--Section 1 -->  
+ 		<div class="section row align-items-center py-5 ps-md-5 section-grey" role="region" aria-labelledby="sec-2-title">
+      
+    		<div class="col-12 d-md-none mb-3 xtrawrap-right">
+ 				
+                		<h2 class="text-black" id="sec-2-title">Introduction</h2>
+			</div>
+			
+			<div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
+     			<img width="1600" height="900" loading="lazy" decoding="async" alt="Illustration – Introduction" class="img-fluid rounded-0" src="images/case_studies/tokens-image-1.png" />
+  			</div>
+    
+			<div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
+			
+                	<h2 class="case-study-title d-none d-md-block px-5">Introduction</h2>
+                    	<h3 class="case-study-sub-title px-4 px-md-5  py-md-1">Evolving the John Lewis Design System to be Brand Agnostic.</h3>
+                    	</div>
+		</div>
+   
+   
+      <!--Section 2 --> 
+		<div class="section row align-items-center py-5 ps-md-5 section-white" role="region" aria-labelledby="sec-3-title">
+      
+    		<div class="col-12 d-md-none mb-3 xtrawrap-right">
+ 					<p class="challange-title">Challenge 1</p>
+                		<h2 class="text-black" id="sec-3-title">Why Change Was Needed</h2>
+			</div>
+			
+			<div class="col-12 col-md-6 order-1 order-md-1 mb-3 mb-md-0">
+     			<img width="1600" height="900" loading="lazy" decoding="async" alt="Illustration – Why Change Was Needed" class="img-fluid rounded-0" src="images/case_studies/tokens-image-2.png" />
+  			</div>
+    
+			<div class="col-12 col-md-6 order-2 order-md-2 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
+				<p class="challange-title d-none d-md-block px-5">Challenge 1</p>
+                	<h2 class="case-study-title d-none d-md-block px-5">Why Change Was Needed</h2>
+                    	<h3 class="case-study-sub-title px-4 px-md-5  py-md-1">A rebrand exposed the limits of our existing design system</h3>
+                    	<p class="case-study-body">As we prepared for a major brand refresh, it became clear that the system wasn’t flexible enough to handle theming, accessibility, or future brand needs. We needed a more robust, scalable foundation.</p>
+                    	<ul class="case-study-list text-black">
+          <li>Deadlines were fixed around the Joyfully Bold rebrand</li>
+          <li>The system couldn’t support theming or dark mode</li>
+          <li>Multiple brands (Waitrose, JL Money) would need shared foundations, with JL Money being the priority with a new team in place relying on our guidance to deliver.</li>
+        </ul>
+			</div>
+		</div>
+   
+   
+   
+   
+   	   <!--Section 3 -->  
+ 		<div class="section row align-items-center py-5 ps-md-5 section-jl-green" role="region" aria-labelledby="sec-4-title">
+      
+    		<div class="col-12 d-md-none mb-3 xtrawrap-right">
+ 					<p class="challange-title-black">Challenge 2</p>
+                		<h2 class="text-black" id="sec-4-title">Our Constraints</h2>
+			</div>
+			
+			<div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
+     			<img width="1600" height="900" loading="lazy" decoding="async" alt="Illustration – Our Constraints" class="img-fluid rounded-0" src="images/case_studies/tokens-image-3.png" />
+  			</div>
+    
+			<div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
+				<p class="challange-title-black d-none d-md-block px-5">Challenge 2</p>
+                	<h2 class="case-study-title d-none d-md-block px-5">Our Constraints</h2>
+                    	<h3 class="case-study-sub-title px-4 px-md-5  py-md-1">Independent teams, inconsistent structures, and technical debt</h3>
+                    	<p class="case-study-body">We inherited a system with no shared token structure, inconsistent colour usage, and hard-coded values across components. Teams were solving the same problems in different ways.</p>
+                    	<ul class="case-study-list text-black">
+          <li>No semantic or layered token architecture existed</li>
+          <li>Multiple simultaneous NDA’d Projects to deliver, with independent timelines and dependencies</li>
+          <li>Each business team had its own completely independent visual language</li>
+        </ul>
+			</div>
+		</div>
+
+   
+      
+      <!--Section 4 --> 
+		<div class="section row align-items-center py-5 ps-md-5 section-jl-green" role="region" aria-labelledby="sec-5-title">
+      
+    		<div class="col-12 d-md-none mb-3 xtrawrap-right">
+ 					<p class="challange-title-black">Transition 1</p>
+                		<h2 class="text-black" id="sec-5-title">Setting a Clear Approach</h2>
+			</div>
+			
+			<div class="col-12 col-md-6 order-1 order-md-1 mb-3 mb-md-0">
+     			<img width="1600" height="900" loading="lazy" decoding="async" alt="Illustration – Setting a Clear Approach" class="img-fluid rounded-0" src="images/case_studies/tokens-image-4.png" />
+  			</div>
+    
+			<div class="col-12 col-md-6 order-2 order-md-2 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
+				<p class="challange-title-black d-none d-md-block px-5">Transition 1</p>
+                	<h2 class="case-study-title d-none d-md-block px-5">Setting a Clear Approach</h2>
+                    	<h3 class="case-study-sub-title px-4 px-md-5  py-md-1">Start small, build for scale</h3>
+                    	<p class="case-study-body">We knew we had to deliver meaningful progress fast without creating fragile systems. That meant focusing on colour first and building semantic flexibility from the start.</p>
+                    	<ul class="case-study-list text-black">
+                  <li>Focused on high-impact areas like colour and interaction states</li>
+          <li>Introduced semantic tokens to separate intent from value</li>
+          <li>Prioritised clarity, accessibility, and developer adoption</li>
+        </ul>
+			</div>
+		</div>
+   
+   
+   
+   
+   	   <!--Section 5 -->  
+ 		<div class="section row align-items-center py-5 ps-md-5 section-grey2" role="region" aria-labelledby="sec-6-title">
+      
+    		<div class="col-12 d-md-none mb-3 xtrawrap-right">
+ 					<p class="challange-title">Process Step 1</p>
+                		<h2 class="text-black" id="sec-6-title">Building the Token Structure</h2>
+			</div>
+			
+			<div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
+     			<img width="1600" height="900" loading="lazy" decoding="async" alt="Illustration – Building the Token Structure" class="img-fluid rounded-0" src="images/case_studies/tokens-image-5.png" />
+  			</div>
+    
+			<div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
+				<p class="challange-title d-none d-md-block px-5">Process Step 1</p>
+                	<h2 class="case-study-title d-none d-md-block px-5">Building the Token Structure</h2>
+                    	<h3 class="case-study-sub-title px-4 px-md-5  py-md-1">From fixed colours to a flexible semantic system</h3>
+                    	<p class="case-study-body">We introduced a layered token architecture: global values, semantic aliases, and component-level application. This gave us power to theme at scale without rewriting components.</p>
+                    	  <ul class="case-study-list text-black">
+          <li>Created tokens for brand, interaction, feedback, surface, and text</li>
+          <li>Introduced variables across design and code environments</li>
+          <li>I initiated the tokenisation work and began aligning JL Money, Waitrose, and JL Partnership</li>
+        </ul>
+			</div>
+		</div>
+   
+
+    
+    
+      <!--Section 6 --> 
+		<div class="section row align-items-center py-5 ps-md-5 section-white" role="region" aria-labelledby="sec-7-title">
+      
+    		<div class="col-12 d-md-none mb-3 xtrawrap-right">
+ 					<p class="challange-title">Process Step 2</p>
+                		<h2 class="text-black" id="sec-7-title">Making It Work in Practice</h2>
+			</div>
+			
+			<div class="col-12 col-md-6 order-1 order-md-1 mb-3 mb-md-0">
+     			<img width="1600" height="900" loading="lazy" decoding="async" alt="Illustration – Making It Work in Practice" class="img-fluid rounded-0" src="images/case_studies/tokens-image-6.png" />
+  			</div>
+    
+			<div class="col-12 col-md-6 order-2 order-md-2 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
+				<p class="challange-title d-none d-md-block px-5">Process Step 2</p>
+                	<h2 class="case-study-title d-none d-md-block px-5">Making It Work in Practice</h2>
+                    	<h3 class="case-study-sub-title px-4 px-md-5  py-md-1">Cross-functional collaboration was key to adoption</h3>
+                    	<p class="case-study-body">We worked closely with engineering to ensure each component was verified in Storybook. On the design side, we created a comprehensive system site with guidance, usage, and component anatomy.</p>
+                    	
+                    <ul class="case-study-list text-black">
+          <li>Designers and developers collaborated from day one</li>
+          <li>Used Style Dictionary to ensure consistent output across platforms</li>
+          <li>Built robust design documentation in Figma and online</li>
+        </ul>
+			</div>
+		</div>
+   
+    
+    
+   
+   
+   	   <!--Section 7 -->  
+ 		<div class="section row align-items-center py-5 ps-md-5 section-grey" role="region" aria-labelledby="sec-8-title">
+      
+    		<div class="col-12 d-md-none mb-3 xtrawrap-right">
+ 					<p class="challange-title">Transition 2</p>
+                		<h2 class="text-black" id="sec-8-title">From System to Solution</h2>
+			</div>
+			
+			<div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
+     			<img width="1600" height="900" loading="lazy" decoding="async" alt="Illustration – From System to Solution" class="img-fluid rounded-0" src="images/case_studies/tokens-image-7.png" />
+  			</div>
+    
+			<div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
+				<p class="challange-title d-none d-md-block px-5">Transition 2</p>
+                	<h2 class="case-study-title d-none d-md-block px-5">From System to Solution</h2>
+                    	<h3 class="case-study-sub-title px-4 px-md-5  py-md-1">Laying the foundation for multi-brand flexibility</h3>
+                    	<p class="case-study-body">With strong infrastructure in place, we expanded usage, embedded governance, and began enabling theming across the wider partnership.</p>
+         <ul class="case-study-list text-black">
+          <li>Focus shifted from core tokenisation to application at scale</li>
+          <li>Governance and contribution models were defined</li>
+          <li>We actively supported cross-brand rollout</li>
+        </ul>
+			</div>
+		</div>
+
+   
+      <!--Section 8 --> 
+		<div class="section row align-items-center py-5 ps-md-5 section-white" role="region" aria-labelledby="sec-9-title">
+      
+    		<div class="col-12 d-md-none mb-3 xtrawrap-right">
+ 					<p class="challange-title">Solution Step 1</p>
+                		<h2 class="text-black" id="sec-9-title">What We Delivered</h2>
+			</div>
+			
+			<div class="col-12 col-md-6 order-1 order-md-1 mb-3 mb-md-0">
+     			<img width="1600" height="900" loading="lazy" decoding="async" alt="Illustration – What We Delivered" class="img-fluid rounded-0" src="images/case_studies/tokens-image-8.png" />
+  			</div>
+    
+			<div class="col-12 col-md-6 order-2 order-md-2 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
+				<p class="challange-title d-none d-md-block px-5">Solution Step 1</p>
+                	<h2 class="case-study-title d-none d-md-block px-5">What We Delivered</h2>
+                    	<h3 class="case-study-sub-title px-4 px-md-5  py-md-1">Tokens that enable scalability, accessibility, and consistency</h3>
+                    	<p class="case-study-body">We delivered a semantic token system that can support multiple brands, theming contexts, and accessibility standards — with clear documentation for adoption.</p>
+         <ul class="case-study-list text-black">
+          <li>Tokens are centralised, semantic, and brand-ready</li>
+          <li>The system enables theme switching without component rewrites</li>
+          <li>Accessibility is embedded, not retrofitted</li>
+        </ul>
+			</div>
+		</div>
+   
+    
+   
+   
+   	   <!--Section 9 -->  
+ 		<div class="section row align-items-center py-5 ps-md-5 section-grey" role="region" aria-labelledby="sec-10-title">
+      
+    		<div class="col-12 d-md-none mb-3 xtrawrap-right">
+ 					<p class="challange-title">Solution Step 2</p>
+                		<h2 class="text-black" id="sec-10-title">System-Wide Benefits</h2>
+			</div>
+			
+			<div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
+     			<img width="1600" height="900" loading="lazy" decoding="async" alt="Illustration – System-Wide Benefits" class="img-fluid rounded-0" src="images/case_studies/tokens-image-9.png" />
+  			</div>
+    
+			<div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
+				<p class="challange-title d-none d-md-block px-5">Solution Step 2</p>
+                	<h2 class="case-study-title d-none d-md-block px-5">System-Wide Benefits</h2>
+                    	<h3 class="case-study-sub-title px-4 px-md-5  py-md-1">A scalable foundation across the JL Partnership</h3>
+                    	<p class="case-study-body">Our work enabled teams across John Lewis, Waitrose, and JL Money to build with shared standards. With strong governance, the system can now evolve cleanly.</p>
+       <ul class="case-study-list text-black">
+          <li>Token structure reduces tech debt and duplication</li>
+          <li>Built for rebrand, dark mode, seasonal and campaign theming</li>
+          <li>Foundation now used across key JL digital properties</li>
+        </ul>
+			</div>
+		</div>
+
+   
+      <!--Section 10 --> 
+		<div class="section row align-items-center py-5 ps-md-5 section-white" role="region" aria-labelledby="sec-11-title">
+      
+    		<div class="col-12 d-md-none mb-3 xtrawrap-right">
+                		<h2 class="text-black" id="sec-11-title">Key Learning</h2>
+			</div>
+			
+			<div class="col-12 col-md-6 order-1 order-md-1 mb-3 mb-md-0">
+     			<img width="1600" height="900" loading="lazy" decoding="async" alt="Illustration – Key Learning" class="img-fluid rounded-0" src="images/case_studies/tokens-image-10.png" />
+  			</div>
+    
+			<div class="col-12 col-md-6 order-2 order-md-2 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
+                	<h2 class="case-study-title d-none d-md-block px-5">Key Learning</h2>
+                    	<h3 class="case-study-sub-title px-4 px-md-5  py-md-1">Understand the Anatomy of Components &amp; semantic abstraction</h3>
+       <ul class="case-study-list text-black">
+          <li><strong>Start with tokens, not components:</strong> By creating a semantic layer before tweaking core components, we enabled theme switching and future‑ proofed the system from the outset</li>
+          <li><strong>Collaborate deeply between design and engineering:</strong> Working hand‑ in‑ hand (e.g. jointly verifying Storybook components, refining naming conventions) helped us align intention with implementation and resolve constraints early. Find that common language.</li>
+          <li><strong>Document and govern consistently:</strong> Building a dedicated design system website with guidance, anatomy, and governance rules enabled multiple teams to adopt and contribute safely and sustainably</li>
+          <li><strong>Embed accessibility into tokens from day one:</strong> Designing everything with WCAG contrast and inclusive requirements built broad potential into the system and avoided retrofitting challenges later</li>
+        </ul>
+        
+        
+        
+                    	 <p class="case-study-body">With many thanks to all the Design System Team: Mohamed Kherroubi, Sam Hoh, Lewis Jones, Katherine Lattaway, Bradley Nicholls, and James Ault</p>
+        <p class="case-study-body">And in the wider business for essential insights into the other businesses’ Design Systems <br/>Rob (JL Partnership), John (JL Money) &amp; Dara (Waitrose)</p>
+
+        
+        <p class="text-black px-4 px-md-5">For more info read:</p>
+          <span class="px-4 px-md-5 pt-2 pb-3 py-md-1">
+         <a href="john-lewis-tokenisation.html" class="btn">Sam's Medium article</a>
+    </span>
+			</div>
+		</div>
+   
+
+    
+    
+    
+   
+  </div>
+  </main>
+  <!-- Footer -->
+  <div class="bg-200 pt-0 pb-2 pb-md-5">
+   <footer class="text-white">
+
+    <div class="footer-bottom py-3 text-center" style="margin-bottom: 0">
+     &copy; Mark Streatfield 2025. All Rights Reserved.
+    </div>
+   </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+ </body>
+</html>
