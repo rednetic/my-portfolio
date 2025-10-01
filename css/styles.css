@@ -1,4 +1,4 @@
-/* ========== Mark Streatfield — Cleaned CSS (2025-10-01) ========== */
+/* ========== Mark Streatfield — styles.css (restored heroes, fixed sizes) ========== */
 
 /* ------------------------------
    Tokens / CSS Variables
@@ -7,7 +7,7 @@
   /* semantic neutrals */
   --full-black: #000000;
   --full-white: #ffffff;
-  --text-black: #121212;        /* added: referenced by components */
+  --text-black: #121212;
   --text-100: #162132;
   --web-background: #eeeeee;
 
@@ -32,7 +32,7 @@
   --accent-100: #ff6b6b;
   --accent-200: #ffbbbb;
   --accent-300: #ec8f8f;
-  --blue-link: #2563eb;         /* added: referenced by .link-blue */
+  --blue-link: #2563eb;
 
   /* button / chrome gradients */
   --fill-start: rgba(37, 99, 235, 0.8);
@@ -80,32 +80,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-p { font-weight: 300; } /* was 200; improved readability */
-
-/* Progressive heading scale */
-h1 {
-  font-size: clamp(2.25rem, 5vw, 8rem);
-  font-weight: 700;
-  line-height: 1.1;
-}
-h2 {
-  font-size: clamp(1.5rem, 2.2vw, 3rem);
-  line-height: 1.06;
-  color: var(--primary-200);
-  font-weight: 700;
-}
-h3 {
-  font-size: clamp(1.125rem, 1.5vw, 2rem);
-  color: var(--primary-200);
-  font-weight: 600;
-}
-h4 { font-size: 1.25rem; font-weight: 600; }
-h5 { font-size: 1.125rem; font-weight: 600; }
-h6 { font-size: 1rem; font-weight: 600; }
+/* Keep original headline sizes to avoid layout shifts */
+h1 { font-size: 64px; font-weight: 700; line-height: 1.1; }
+h2 { font-size: 32px; line-height: 1.06; color: var(--primary-200); font-weight: 700; }
+h3 { font-size: 24px; color: var(--primary-200); }
+h4, h5, h6 { font-size: 40px; font-weight: 500; } /* original setting */
 
 .blue-title { color: var(--primary-200); }
 
-/* Eyebrow / “Challenge” titles (accept both spellings without changing HTML) */
+/* Eyebrow / “Challenge” titles (support both spellings without HTML changes) */
 .challenge-title,
 .challange-title {
   color: var(--primary-200);
@@ -118,16 +101,10 @@ h6 { font-size: 1rem; font-weight: 600; }
 .challenge-title-light-blue,
 .challange-title-light-blue { color: var(--primary-400); }
 
-.case-study-title {
-  color: var(--text-black);
-  font-size: 48px;
-  font-weight: 700;
-}
-.case-study-sub-title {
-  color: var(--text-black);
-  font-size: 20px;
-  font-weight: 600;
-}
+.case-study-title { color: var(--text-black); font-size: 48px; font-weight: 700; }
+.case-study-sub-title { color: var(--text-black); font-size: 20px; font-weight: 600; }
+
+p { font-weight: 300; } /* light but legible */
 
 /* Links */
 a {
@@ -145,25 +122,16 @@ a {
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 
 /* ------------------------------
    Navbar
 ---------------------------------*/
 .nav-padding { padding-top: 19px; padding-bottom: 19px; }
-
 .navbar { background-color: var(--primary-200); }
-
 .navbar-nav { display: flex; gap: 0.2rem; }
-
-@media (min-width: 768px) {
-  .navbar-nav { gap: 2rem; }
-}
+@media (min-width: 768px) { .navbar-nav { gap: 2rem; } }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -186,12 +154,9 @@ a {
   text-shadow: none;
   text-decoration: none; /* use pseudo underline only */
 }
-.nav-link.selected {
-  color: var(--full-black);
-  text-shadow: none;
-}
+.nav-link.selected { color: var(--full-black); text-shadow: none; }
 
-/* Hover underline indicator (replaces invalid rules) */
+/* Pseudo underline (excludes dropdown caret) */
 .navbar .nav-link:not(.dropdown-toggle)::after {
   content: "";
   position: absolute;
@@ -203,9 +168,7 @@ a {
   transition: transform 180ms ease;
 }
 .navbar .nav-link:not(.dropdown-toggle):hover::after,
-.navbar .nav-link.selected:not(.dropdown-toggle)::after {
-  transform: scaleX(1);
-}
+.navbar .nav-link.selected:not(.dropdown-toggle)::after { transform: scaleX(1); }
 
 /* Dropdown caret colours */
 .navbar .nav-item.show > .nav-link::after { content: none; }
@@ -226,26 +189,23 @@ footer { background-color: var(--grey-blue-400); }
 .link-blue.selected { color: var(--blue-link); }
 
 /* ------------------------------
-   Hero
+   Hero (two distinct variants, fixed heights)
 ---------------------------------*/
-
-/* Hero */
 .hero-section {
-  background: var(--grey-200);
+  background: var(--grey-200);   /* light hero for generic pages */
   height: 400px;
 }
-
 .hero-case-study-section {
-  background: var(--primary-100);
+  background: var(--primary-100);/* dark hero for case studies */
   height: 400px;
 }
-
+@media (min-width: 768px) {
+  .hero-section { height: 600px; }
+  .hero-case-study-section { height: 600px; }
+}
 
 .hero-h2-block,
-.hero-case-study-h2-block {
-  display: inline-block !important;
-  padding: 10px !important;
-}
+.hero-case-study-h2-block { display: inline-block !important; padding: 10px !important; }
 
 .hero-h2 {
   font-size: 24px;
@@ -259,7 +219,6 @@ footer { background-color: var(--grey-blue-400); }
   line-height: 32px;
   color: var(--primary-300);
 }
-
 @media (min-width: 768px) {
   .hero-h2 { font-size: 40px; line-height: 1.06; }
   .hero-case-study-h2 { font-size: 32px; line-height: 32px; }
@@ -286,19 +245,14 @@ footer { background-color: var(--grey-blue-400); }
   padding-bottom: 0.25rem;
   margin-bottom: 1rem;
 }
-/* Auto-invert on dark sections */
+/* Auto-invert on dark sections (keep if desired) */
 .section-black .case-study-body,
 .section-grey3 .case-study-body,
-.section-blue .case-study-body {
-  color: var(--full-white);
-}
+.section-blue .case-study-body { color: var(--full-white); }
 
 /* Padding helpers */
 .xtrawrap-left,
-.xtrawrap-right {
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-}
+.xtrawrap-right { padding-left: 1rem !important; padding-right: 1rem !important; }
 
 /* Lists */
 .case-study-list {
@@ -307,36 +261,22 @@ footer { background-color: var(--grey-blue-400); }
   margin-bottom: 1.5rem;
   list-style: disc outside;
 }
-.case-study-list li {
-  margin-bottom: 0.5rem;
-  text-indent: 0;
-}
+.case-study-list li { margin-bottom: 0.5rem; text-indent: 0; }
 .case-study-numbered-list {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   margin-bottom: 1.5rem;
   list-style: decimal outside;
 }
-.case-study-numbered-list li {
-  margin-bottom: 0.5rem;
-  text-indent: 0;
-}
+.case-study-numbered-list li { margin-bottom: 0.5rem; text-indent: 0; }
+
+.intro-text { font-size: 20px; }
 
 @media (min-width: 768px) {
-  .case-study-sub-title {
-    color: var(--text-black);
-    font-size: 32px;
-    font-weight: 600;
-  }
+  .case-study-sub-title { color: var(--text-black); font-size: 32px; font-weight: 600; }
   .case-study-list,
-  .case-study-numbered-list {
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
-  }
-  .case-study-body {
-    padding-left: 3rem;  /* ≈ Bootstrap px-md-5 */
-    padding-right: 3rem;
-  }
+  .case-study-numbered-list { padding-left: 4.5rem; padding-right: 4.5rem; }
+  .case-study-body { padding-left: 3rem; padding-right: 3rem; } /* ≈ px-md-5 */
   .hero-wrapper { padding: 24%; width: 1440px; }
   .xtrawrap-right { padding-right: 4rem !important; }
   .xtrawrap-left  { padding-left: 4rem !important; }
@@ -434,16 +374,6 @@ footer { background-color: var(--grey-blue-400); }
 /* Optional divider */
 .navbar .dropdown-divider { border-top: 1px solid rgba(255,255,255,0.15); }
 
-  .hero-section {
-    height: 600px;
-    
-  }
-  
-.hero-case-study-section {
-  background: var(--primary-100);
-  height: 600px;
-}
-
 /* ≥992px: frosted treatment */
 @media (min-width: 992px) {
   .navbar .dropdown-menu {
@@ -504,4 +434,4 @@ footer { background-color: var(--grey-blue-400); }
   }
 }
 
-/* ========== End of cleaned CSS ========== */
+/* ========== End of styles.css ========== */
