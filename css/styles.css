@@ -1,51 +1,41 @@
-/* ========== Mark Streatfield — styles.css (restored heroes, fixed sizes) ========== */
 
-/* ------------------------------
-   Tokens / CSS Variables
----------------------------------*/
+ /* Mark Streatfield Brand */
 :root {
-  /* semantic neutrals */
+  /* Mode 1 */
+  /* color */
+  --accent-100: #ff6b6b;
+  --accent-200: #ffbbbb;
+  --accent-300: #ec8f8f;
   --full-black: #000000;
   --full-white: #ffffff;
-  --text-black: #121212;
-  --text-100: #162132;
-  --web-background: #eeeeee;
-
-  /* greys / blue-greys */
   --grey-100: #fcfcfc;
   --grey-200: #f8f8f8;
-  --grey-300: #eeeeee;
-  --grey-blue-50: #e2ecf6;
+  --grey-300: #EEEEEE;
   --grey-blue-100: #cbd5e1;
   --grey-blue-200: #94a3b8;
   --grey-blue-300: #475569;
   --grey-blue-400: #1e293b;
-
-  /* branding */
+  --grey-blue-50: #e2ecf6;
   --primary-100: #184495;
   --primary-200: #2563eb;
   --primary-300: #598ef3;
   --primary-400: #d3e6fe;
-  --jl-green: #dcebe7;
+  --text-100: #162132;
+  --web-background: #eeeeee;
+  --jl-green: #DCEBE7;
+  
+       --fill-start: rgba(37, 99, 235, 0.8); /* lightened version */
+      --fill-end: #2563EB;                  /* your exact colour */
 
-  /* accents / links */
-  --accent-100: #ff6b6b;
-  --accent-200: #ffbbbb;
-  --accent-300: #ec8f8f;
-  --blue-link: #2563eb;
+      --stroke-light: rgba(147, 197, 253, 0.8); /* light blue */
+      --stroke-dark:  rgba(37, 99, 235, 0.8);   /* base blue */
+      
+} 
+  
 
-  /* button / chrome gradients */
-  --fill-start: rgba(37, 99, 235, 0.8);
-  --fill-end: #2563eb;
-  --stroke-light: rgba(147, 197, 253, 0.8);
-  --stroke-dark:  rgba(37, 99, 235, 0.8);
 
-  color-scheme: light;
-}
 
-/* ------------------------------
-   Fonts
----------------------------------*/
+/* Fonts: Abrade + Advent Pro */
 @font-face {
   font-family: 'Abrade';
   src: url('../fonts/dehinted-subset-Abrade-Medium.woff2') format('woff2'),
@@ -53,6 +43,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Abrade-Book';
   src: url('../fonts/dehinted-subset-Abrade-Book.woff2') format('woff2'),
@@ -61,77 +52,121 @@
   font-display: swap;
 }
 
-/* ------------------------------
-   Base / Typography
----------------------------------*/
+/* Global Reset */
+.row > * {
+  padding: 0 !important;
+}
+
+/* Typography */
 body {
   font-family: 'Abrade-Book', sans-serif;
   color: var(--text-100);
   background-color: var(--web-background);
-  padding-top: 80px; /* Adjust to navbar height */
+  padding-top: 80px; /* Adjust based on your navbar height */
 }
 
-strong { font-family: 'Abrade', sans-serif; }
+.intro-text {
+  font-size: 20px;
+}
+strong {
+  font-family: 'Abrade', sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "DM Sans", sans-serif;
+font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  margin-top: 0;
+
 }
 
-/* Keep original headline sizes to avoid layout shifts */
-h1 { font-size: 64px; font-weight: 700; line-height: 1.1; }
-h2 { font-size: 32px; line-height: 1.06; color: var(--primary-200); font-weight: 700; }
-h3 { font-size: 24px; color: var(--primary-200); }
-h4, h5, h6 { font-size: 40px; font-weight: 500; } /* original setting */
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+}
 
-.blue-title { color: var(--primary-200); }
-
-/* Eyebrow / “Challenge” titles (support both spellings without HTML changes) */
-.challenge-title,
-.challange-title {
+h2 {
+  font-size: 32px;
+  line-height: 1.06;
   color: var(--primary-200);
-  font-size: 28px;
-  font-weight: 200;
-  font-family: "DM Sans", sans-serif;
+font-weight: 700;
 }
-.challenge-title-black,
-.challange-title-black { color: var(--full-black); }
-.challenge-title-light-blue,
-.challange-title-light-blue { color: var(--primary-400); }
 
-.case-study-title { color: var(--text-black); font-size: 48px; font-weight: 700; }
-.case-study-sub-title { color: var(--text-black); font-size: 20px; font-weight: 600; }
+h3 {
+  font-size: 24px;
+  color: var(--primary-200);
+}
 
-p { font-weight: 300; } /* light but legible */
+h4, h5, h6 {
+  font-size: 40px;
+  font-weight: 500;
+}
 
-/* Links */
+.blue-title {
+color: var(--primary-200);
+}
+p {
+  font-weight: 200;
+}
+
+.challange-title {
+color: var(--primary-200);
+font-size: 28px;
+font-weight: 200;
+font-family: "DM Sans", sans-serif;
+}
+
+.challange-title-black {
+color: var(--full-black);
+font-size: 28px;
+font-weight: 200;
+font-family: "DM Sans", sans-serif;
+}
+
+.challange-title-light-blue {
+color: var(--primary-400);
+font-size: 28px;
+font-weight: 200;
+font-family: "DM Sans", sans-serif;
+}
+
+.case-study-title {
+color: var(--text-black);
+font-size: 48px;
+font-weight: 700;
+
+}
+
+.case-study-sub-title {
+color: var(--text-black);
+font-size: 20px;
+font-weight: 600;
+}
+
+
 a {
   position: relative;
-  color: var(--accent-100);
+  color: var(--accent-100); /* salmon pink */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* Focus visibility */
-:focus-visible {
-  outline: 3px solid #ffbf47; /* high-visibility amber */
-  outline-offset: 3px;
+
+.nav-padding {
+	padding-top: 19px;
+	padding-bottom: 19px;
+}
+/* Navbar */
+
+.navbar {
+	  background-color: var(--primary-200);
+	
 }
 
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+.navbar-nav {
+  display: flex;
+  gap: 0.2rem;
 }
-
-/* ------------------------------
-   Navbar
----------------------------------*/
-.nav-padding { padding-top: 19px; padding-bottom: 19px; }
-.navbar { background-color: var(--primary-200); }
-.navbar-nav { display: flex; gap: 0.2rem; }
-@media (min-width: 768px) { .navbar-nav { gap: 2rem; } }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -144,40 +179,36 @@ a {
   color: var(--full-white);
   text-decoration: none;
   transition: color 0.3s ease;
+  
   font-weight: 500;
   line-height: 150%;
-  text-shadow: 0px 0.5px 1px #10285E;
-}
-.nav-link:focus,
-.nav-link:hover {
-  color: var(--full-white);
-  text-shadow: none;
-  text-decoration: none; /* use pseudo underline only */
-}
-.nav-link.selected { color: var(--full-black); text-shadow: none; }
+  text-shadow: 0px 0.5px 1px #10285E; /* darker blue shadow */
 
-/* Pseudo underline (excludes dropdown caret) */
-.navbar .nav-link:not(.dropdown-toggle)::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: -2px;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: currentColor;
-  transition: transform 180ms ease;
+ 
 }
-.navbar .nav-link:not(.dropdown-toggle):hover::after,
-.navbar .nav-link.selected:not(.dropdown-toggle)::after { transform: scaleX(1); }
 
-/* Dropdown caret colours */
+.nav-link:focus, .nav-link:hover {
+color: var(--full-white);
+ text-shadow: none;
+ text-decoration: underline;
+}
+
+.nav-link.selected {
+  color: var(--full-black);
+ text-shadow: none;
+}
+
+.navbar .nav-link:not(.dropdown-toggle)::after { … }
+.navbar .nav-link:not(.dropdown-toggle):hover::after { … }
 .navbar .nav-item.show > .nav-link::after { content: none; }
 .navbar .dropdown-toggle::after { border-top-color: #fff; }
-.navbar .nav-link.selected.dropdown-toggle::after { border-top-color: var(--full-black); }
+.navbar .nav-link.selected.dropdown-toggle::after {
+  border-top-color: var(--full-black);
+}
 
-/* Footer */
-footer { background-color: var(--grey-blue-400); }
-
+footer {
+	  background-color: var(--grey-blue-400);
+}
 /* Blue Links */
 .link-blue {
   position: relative;
@@ -186,111 +217,118 @@ footer { background-color: var(--grey-blue-400); }
   transition: color 0.3s ease;
   letter-spacing: 0.03em;
 }
-.link-blue.selected { color: var(--blue-link); }
 
-/* ------------------------------
-   Hero (two distinct variants, fixed heights)
----------------------------------*/
+.link-blue.selected {
+  color: var(--blue-link);
+}
+
+
+
+/* Hero */
 .hero-section {
-  background: var(--grey-200);   /* light hero for generic pages */
+  background: var(--grey-200);
   height: 400px;
-}
-.hero-case-study-section {
-  background: var(--primary-100);/* dark hero for case studies */
-  height: 400px;
-}
-@media (min-width: 768px) {
-  .hero-section { height: 600px; }
-  .hero-case-study-section { height: 600px; }
 }
 
-.hero-h2-block,
-.hero-case-study-h2-block { display: inline-block !important; padding: 10px !important; }
+.hero-case-study-section {
+  background: var(--primary-100);
+  height: 400px;
+}
+
+
+.hero-h2-block {
+  display: inline-block !important;
+  padding: 10px !important;
+
+}
+
+.hero-case-study-h2-block {
+  display: inline-block !important;
+  padding: 10px !important;
+
+}
+
 
 .hero-h2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-  color: var(--primary-100);
+   color: var(--primary-100);
 }
+
 .hero-case-study-h2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-  color: var(--primary-300);
-}
-@media (min-width: 768px) {
-  .hero-h2 { font-size: 40px; line-height: 1.06; }
-  .hero-case-study-h2 { font-size: 32px; line-height: 32px; }
+   color: var(--primary-300);
 }
 
-/* ------------------------------
-   Sections / Background helpers
----------------------------------*/
-.section-white  { background-color: var(--full-white); }
-.section-black  { background-color: var(--full-black); }
-.section-grey   { background-color: var(--grey-200); }
-.section-grey2  { background-color: var(--grey-300); }
-.section-grey3  { background-color: var(--grey-blue-300); }
-.section-blue   { background-color: var(--primary-200); }
-.section-light-blue { background-color: var(--grey-blue-50); }
-.section-jl-green { background-color: var(--jl-green); }
+/* Sections */
+.section-white {
+  background-color: var(--full-white);
+}
 
-/* Case-study body copy */
+.section-black {
+  background-color: var(--full-black);
+}
+
+.section-grey {
+  background-color: var(--grey-200);
+}
+
+.section-grey2 {
+  background-color: var(--grey-300);
+}
+
+.section-grey3 {
+  background-color: var(--grey-blue-300);
+}
+
+.section-blue {
+  background-color: var(--primary-200);
+}
+
+.section-light-blue {
+  background-color: var(--grey-blue-50);
+}
+
+.section-jl-green {
+  background-color: var( --jl-green);
+}
+
 .case-study-body {
-  color: var(--full-black);
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  margin-bottom: 1rem;
+  color: var(--full-black);    /* or #000 if you don’t have tokens */
+  padding-left: 1.5rem;        /* matches px-4 */
+  padding-right: 1.5rem;       /* matches px-4 */
+  padding-top: 0.25rem;        /* matches py-md-1 */
+  padding-bottom: 0.25rem;     /* matches py-md-1 */
+  margin-bottom: 1rem;         /* space between paragraphs */
 }
-/* Auto-invert on dark sections (keep if desired) */
-.section-black .case-study-body,
-.section-grey3 .case-study-body,
-.section-blue .case-study-body { color: var(--full-white); }
 
-/* Padding helpers */
+/* Padding Helpers */
 .xtrawrap-left,
-.xtrawrap-right { padding-left: 1rem !important; padding-right: 1rem !important; }
+.xtrawrap-right {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
 
-/* Lists */
 .case-study-list {
-  padding-left: 2.5rem;
+  padding-left: 2.5rem;       /* overall indent */
   padding-right: 2.5rem;
-  margin-bottom: 1.5rem;
-  list-style: disc outside;
-}
-.case-study-list li { margin-bottom: 0.5rem; text-indent: 0; }
-.case-study-numbered-list {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  margin-bottom: 1.5rem;
-  list-style: decimal outside;
-}
-.case-study-numbered-list li { margin-bottom: 0.5rem; text-indent: 0; }
-
-.intro-text { font-size: 20px; }
-
-@media (min-width: 768px) {
-  .case-study-sub-title { color: var(--text-black); font-size: 32px; font-weight: 600; }
-  .case-study-list,
-  .case-study-numbered-list { padding-left: 4.5rem; padding-right: 4.5rem; }
-  .case-study-body { padding-left: 3rem; padding-right: 3rem; } /* ≈ px-md-5 */
-  .hero-wrapper { padding: 24%; width: 1440px; }
-  .xtrawrap-right { padding-right: 4rem !important; }
-  .xtrawrap-left  { padding-left: 4rem !important; }
-  .py-5 { padding-top: 6rem !important; padding-bottom: 6rem !important; }
+  margin-bottom: 1.5rem;      /* spacing after list */
+  list-style-type: disc;      /* standard round bullets */
+  list-style-position: outside;
 }
 
-/* ------------------------------
-   Buttons
----------------------------------*/
+.case-study-list li {
+  margin-bottom: 0.5rem;      /* breathing space between items */
+  text-indent: 0;             /* ensures wrapped text aligns neatly */
+}
+
+
 .btn {
-  inline-size: auto;           /* content-based width */
-  min-height: 48px;
-  padding-inline: 12px;        /* 24px total extra width */
-  padding-block: 0;
+  width: 210px;
+  height: 48px;
   border-radius: 8px;
   border: 1px solid transparent;
 
@@ -310,17 +348,18 @@ footer { background-color: var(--grey-blue-400); }
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
-  text-shadow: 0px 0.5px 1px #10285E;
+  text-shadow: 0px 0.5px 1px #10285E; /* darker blue shadow */
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  text-decoration: none;
-  text-align: center;
+  text-decoration: none;     /* removes underline on <a> */
+  text-align: center;        /* keeps text centred in <a> */
 
   transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
 }
+
 .btn:hover {
   color: var(--full-white);
   background:
@@ -333,79 +372,205 @@ footer { background-color: var(--grey-blue-400); }
       var(--stroke-dark) 270deg,
       var(--stroke-light) 360deg
     ) border-box;
+
   box-shadow: 0 2px 6px rgba(0,0,0,0.50);
 }
+
 .btn:active {
   background:
     linear-gradient(90deg, #1d55d6 0%, #1a4ec6 100%) padding-box,
     inherit;
   transform: translateY(0);
   box-shadow: 0 1px 3px rgba(0,0,0,0.2) inset;
-  color: var(--full-white);
+    color: var(--full-white);
 }
-.btn:focus { color: var(--full-white); outline-offset: 3px; }
 
-/* ------------------------------
-   Dropdowns
----------------------------------*/
+.btn:focus {
+  outline-offset: 3px;
+    color: var(--full-white);
+}
+
 /* Base dropdown panel */
 .navbar .dropdown-menu {
-  background: #0d1b3d;
-  border: none;
-  border-radius: 8px;
+  background: #0d1b3d;              /* dark background (adjust to taste) */
+  border: none;                     /* remove default border */
+  border-radius: 8px;               /* rounded corners */
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  margin-top: 0.5rem;
-  min-width: 200px;
-  padding: 0.5rem 0;
+  margin-top: 0.5rem;               /* little space below parent link */
+  min-width: 200px;                 /* keep it wide enough */
+  padding: 0.5rem 0;                /* tighter spacing */
 }
-/* Each item */
+
+/* Each item inside dropdown */
 .navbar .dropdown-item {
-  color: var(--full-white);
+  color: #fff;                      /* white text */
   padding: 0.6rem 1rem;
   font-size: 0.95rem;
   transition: background 0.2s ease;
+  
 }
-/* Hover/focus */
+
+/* Hover/focus state */
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus {
   background: linear-gradient(90deg, #4f83f1 0%, #3c73ee 100%);
   color: #fff;
 }
-/* Optional divider */
-.navbar .dropdown-divider { border-top: 1px solid rgba(255,255,255,0.15); }
 
-/* ≥992px: frosted treatment */
+/* Optional divider styling */
+.navbar .dropdown-divider {
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+    
+/* Media Queries */
+@media (min-width: 768px) {
+  .custom-padding-desktop {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .navbar-nav {
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 128px;
+    line-height: 1.2;
+    font-weight: 700 !important;
+  }
+
+  h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.06;
+    color: var(--primary-200);
+  }
+
+  .hero-section {
+    height: 600px;
+    
+  }
+  
+.hero-case-study-section {
+  background: var(--primary-100);
+  height: 600px;
+}
+
+  .hero-h2-block {
+    padding: 10px;
+    display: inline-block !important;
+    background-color: var(--bg-100);
+  }
+
+  .hero-h2 {
+    font-size: 40px;
+    font-weight: 700;
+      line-height: 1.06;
+    color: var(--primary-100);
+  }
+
+.hero-case-study-h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+   color: var(--primary-300);
+}
+
+.case-study-sub-title {
+color: var(--text-black);
+font-size: 32px;
+font-weight: 600;
+}
+
+.case-study-list {
+  padding-left: 4.5rem;       /* overall indent */
+  padding-right: 4.5rem;
+  margin-bottom: 1.5rem;      /* spacing after list */
+  list-style-type: disc;      /* standard round bullets */
+  list-style-position: outside;
+}
+
+.case-study-list li {
+  margin-bottom: 0.5rem;      /* breathing space between items */
+  text-indent: 0;             /* ensures wrapped text aligns neatly */
+}
+
+.case-study-numbered-list {
+  padding-left: 4.5rem;       /* overall indent */
+  padding-right: 4.5rem;
+  margin-bottom: 1.5rem;      /* spacing after list */     /* standard round bullets */
+  list-style-position: outside;
+}
+
+.case-study-numbered-list li {
+  margin-bottom: 0.5rem;      /* breathing space between items */
+  text-indent: 0;             /* ensures wrapped text aligns neatly */
+}
+
+  .case-study-body {
+    padding-left: 3rem;  /* desktop ≈ Bootstrap px-md-5 */
+    padding-right: 3rem;
+ }   
+    
+  .hero-wrapper {
+    padding: 24%;
+    width: 1440px;
+  }
+
+  .xtrawrap-right {
+    padding-right: 4rem !important;
+  }
+
+  .xtrawrap-left {
+    padding-left: 4rem !important;
+  }
+  
+  .py-5 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+  }
+}
+ /* ===== Desktop dropdown (≥992px) ===== */
 @media (min-width: 992px) {
   .navbar .dropdown-menu {
     border-radius: 8px;
-    border: 1px solid transparent;
-    background:
-      linear-gradient(90deg, var(--fill-start) 0%, var(--fill-end) 100%) padding-box,
-      conic-gradient(
-        from 45deg,
-        var(--stroke-dark) 45deg,
-        var(--stroke-light) 50deg,
-        var(--stroke-dark) 200deg,
-        var(--stroke-light) 250deg,
-        var(--stroke-dark) 360deg
-      ) border-box;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    color: var(--full-white);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    text-shadow: 0px 0.5px 1px #10285E;
+  border: 1px solid transparent;
+
+  background:
+    linear-gradient(90deg, var(--fill-start) 0%, var(--fill-end) 100%) padding-box,
+    conic-gradient(
+      from 45deg,
+      var(--stroke-dark) 45deg,
+      var(--stroke-light) 50deg,
+      var(--stroke-dark) 200deg,
+      var(--stroke-light) 250deg,
+      var(--stroke-dark) 360deg
+    ) border-box;
+
+  /* “frosted glass” blur effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+
+
+  color: var(--full-white);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-shadow: 0px 0.5px 1px #10285E; /* darker blue shadow */
+ 
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     margin-top: 0.5rem;
     min-width: 200px;
     padding: 0.5rem 0;
   }
+
   .navbar .dropdown-item {
     color: var(--full-white);
     padding: 0.6rem 1rem;
   }
+
   .navbar .dropdown-item:hover,
   .navbar .dropdown-item:focus {
     background: linear-gradient(90deg, #4f83f1 0%, #3c73ee 100%);
@@ -413,25 +578,30 @@ footer { background-color: var(--grey-blue-400); }
   }
 }
 
-/* <992px: mobile dropdown */
+/* ===== Mobile dropdown (<992px) ===== */
 @media (max-width: 991px) {
   .navbar .dropdown-menu {
-    background: transparent;
+    background: transparent;     /* blend with mobile nav */
     border: none;
     box-shadow: none;
-    margin-left: 1rem;
+    margin-left: 1rem;           /* slight inset */
     padding: 0;
-    color: var(--full-white);
+     color: var(--full-white);
   }
+
   .navbar .dropdown-item {
-    color: var(--full-white);
+    color: #333;                 /* dark text for light bg */
     padding: 0.5rem 1rem;
+     color: var(--full-white);
   }
+
   .navbar .dropdown-item:hover,
   .navbar .dropdown-item:focus {
-    background: rgba(255,255,255,0.1);
-    color: var(--full-white);
+    background: rgba(0,0,0,0.05); /* subtle hover */
+ color: var(--full-white);
   }
 }
 
-/* ========== End of styles.css ========== */
+
+  
+}
