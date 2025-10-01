@@ -6,7 +6,11 @@
   <title>Mark Streatfield Portfolio</title>
   <meta name="description" content="A design system for quote management apps created for Ground Control, a UK-based landscaping and maintenance company."/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;600;700&amp;display=swap" rel="stylesheet"/>
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/jvz8pfp.css">
   <link rel="stylesheet" href="css/styles.css"/>
 
   <!-- Favicon -->
@@ -33,50 +37,50 @@
   <meta name="twitter:image" content="https://mark-streatfield.com/images/project.jpg">
 </head>
 
- <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-4 py-3">
-   <a class="navbar-brand d-flex align-items-center" href="./"><img src="images/ms-logo.svg" alt="Logo" height="32"></a>
+ <body style="background-color: var(--primary-200);">
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-4 nav-padding">
+   <a class="navbar-brand d-flex align-items-center" href="./"><img loading="lazy" decoding="async" src="images/dms-logo.svg" alt="Logo" height="32"></a>
 
-   <button class="navbar-toggler border-0 ms-2" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-    <span class="navbar-toggler-icon">
-    </span>
-   </button>
+   <button class="navbar-toggler border-0 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav align-items-lg-center">
-        
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="john-lewis.html" id="jlDropdown"
+     role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+    John Lewis
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="jlDropdown">
+    <li><a class="dropdown-item" href="john-lewis.html">Overview</a></li>
+    <li><a class="dropdown-item" href="john-lewis-dark-mode.html">Case Study: Dark Mode</a></li>
+    <li><a class="dropdown-item" href="john-lewis-messaging.html">Case Study: Messaging</a></li>
+    <li><a class="dropdown-item" href="john-lewis-tokenisation.html">Case Study: Tokens for Theming</a></li>
+
+  </ul>
+</li>
+
         <li class="nav-item">
-         <a class="nav-link" href="john-lewis.html" title="John Lewis work">
-          John Lewis
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link" href="ground-control.html"title="Ground Control work">
+         <a class="nav-link" href="ground-control.html">
           Ground Control
          </a>
         </li>
         <li class="nav-item">
-         <a class="nav-link" href="lymited.html" title="Lymited work">
+         <a class="nav-link " href="lymited.html">
           Lymited
          </a>
         </li>
-        <li class="d-none d-sm-none d-lg-block d-xl-block">|
-         </li>
-        <li class="nav-item">
-         <a class="nav-link" href="https://creativefrequencies.substack.com" title="Creative Frequencies Substack">
-          Articles
-         </a>
-        </li>
+ 
      <li class="nav-item">
-      <a class="nav-link" href="https://www.linkedin.com/in/mark-streatfield/" title="LinkedIn">
-       LinkedIn
-      </a>
-     </li>
-     <li class="nav-item">
-      <a class="nav-link" href="Mark_Streatfield_CV_April_2025.pdf" title="CV">
+      <a class="nav-link" href="Mark_Streatfield_CV_April_2025.pdf">
        CV
       </a>
      </li>
+     <li class="nav-item">
+      <a class="nav-link" href="https://www.linkedin.com/in/mark-streatfield/" target="_blank" rel="noopener">
+       LinkedIn
+      </a>
+     </li>
+	
 
     </ul>
    </div>
@@ -87,37 +91,24 @@
   </header>
    <!-- Main Sections -->
 	
-	<div class="container my-0 section-2">
+	<div class="container my-0 section-blue">
   <div class="row justify-content-center p-5">
     <div class="col-12 col-lg-6 py-5">
       <div class="text-block text-left py-5">
-     <img alt="The Client" class="img-fluid rounded-0" src="images/mark_logotype.svg" />
-      <h3 class="pt-4">
+      <h3 class="pt-4 text-white">
       Senior Product Designer
      </h3>
-         <p class="pt-5">
-         As a Senior Product Designer with nearly 30 years of experience, my current passion lies in Design Systems. Lately, I’ve been particularly fascinated by the Tokenisation of Design Systems - something I was deeply involved in during my time at John Lewis, helping to drive consistency and scalability across their digital platforms.</p>
+                <p class="text-white intro-text">
+         As a Senior Product Designer with nearly 30 years of experience, my current passion lies in Design Systems. Lately, I’ve been particularly fascinated by the Tokenisation of Design Systems - something I was deeply involved in during my time at John Lewis, helping to drive consistency and scalability across their digital platforms.</p> 
 		  
-		  <p>Outside of work, I run an <a href="https://rednetic.bandcamp.com/" title="Rednetic Recordings" Target="_blank">independent record label</a> and produce music under several aliases: techno and house as cyan341, electronica as Zainetica, and electro as 01Cerulean.</p>
-          
-          <p>I also share reflections on creativity, music, and culture in my Substack articles at <a href="https://creativefrequencies.substack.com/">Creative Frequencies</a>.</p>
-          
+		  <p class="text-white intro-text">Outside of work, I run an <a class="text-black" href="https://rednetic.bandcamp.com/" title="Rednetic Recordings" Target="_blank">independent record label</a> and produce music under several aliases: techno and house as cyan341, electronica as Zainetica, and electro as 01Cerulean.</p>
     </div>
   </div>
-</div>
-	 
+
+	    </div>
+  </div> 
 	 
  
-
-  <!-- Footer -->
-  <div class="bg-200 pt-0 pb-2 pb-md-5">
-   <footer class="text-white">
-
-    <div class="footer-bottom py-3 text-center" style="margin-bottom: 0">
-     &copy; Mark Streatfield 2025. All Rights Reserved.
-    </div>
-   </footer>
-  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
   </script>
  </body>

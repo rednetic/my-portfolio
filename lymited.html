@@ -6,9 +6,13 @@
   <title>Mark Streatfield Portfolio - Ground Control</title>
   <meta name="description" content="A design system for quote management apps created for Ground Control, a UK-based landscaping and maintenance company."/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;600;700&amp;display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/styles.css"/>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/jvz8pfp.css">
+  <link rel="stylesheet" href="css/styles.css"/>
+  
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -34,9 +38,11 @@
 </head>
 
  <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-4 py-3">
-   <a class="navbar-brand d-flex align-items-center" href="./"><img src="images/ms-logo.svg" alt="Logo" height="32"></a>
+ 
+    <!-- Navbar -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-4 nav-padding">
+   <a class="navbar-brand d-flex align-items-center" href="./"><img src="images/dms-logo.svg" alt="Logo" height="32"></a>
 
    <button class="navbar-toggler border-0 ms-2" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
     <span class="navbar-toggler-icon">
@@ -44,36 +50,38 @@
    </button>
    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav align-items-lg-center">
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="john-lewis.html" id="jlDropdown"
+     role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    John Lewis
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="jlDropdown">
+    <li><a class="dropdown-item" href="john-lewis.html">Overview</a></li>
+    <li><a class="dropdown-item" href="john-lewis-dark-mode.html">Case Study: Dark Mode</a></li>
+    <li><a class="dropdown-item" href="john-lewis-messaging.html">Case Study: Messaging</a></li>
+    <li><a class="dropdown-item" href="john-lewis-tokenisation.html">Case Study: Tokens for Theming</a></li>
+  </ul>
+</li>
+
         <li class="nav-item">
-         <a class="nav-link" href="john-lewis.html" title="John Lewis work">
-          John Lewis
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link" href="ground-control.html"title="Ground Control work">
+         <a class="nav-link" href="ground-control.html">
           Ground Control
          </a>
         </li>
         <li class="nav-item">
-         <a class="nav-link selected" href="lymited.html" title="Lymited work">
+         <a class="nav-link selected" href="lymited.html">
           Lymited
          </a>
         </li>
-        <li class="d-none d-sm-none d-lg-block d-xl-block">|
-         </li>
-        <li class="nav-item">
-         <a class="nav-link" href="https://creativefrequencies.substack.com" title="Creative Frequencies Substack">
-          Articles
-         </a>
-        </li>
+ 
      <li class="nav-item">
-      <a class="nav-link" href="https://www.linkedin.com/in/mark-streatfield/" title="LinkedIn">
-       LinkedIn
+      <a class="nav-link" href="Mark_Streatfield_CV_April_2025.pdf">
+       CV
       </a>
      </li>
      <li class="nav-item">
-      <a class="nav-link" href="Mark_Streatfield_CV_April_2025.pdf" title="CV">
-       CV
+      <a class="nav-link" href="https://www.linkedin.com/in/mark-streatfield/">
+       LinkedIn
       </a>
      </li>
 
@@ -81,10 +89,10 @@
    </div>
   </nav>
   <!-- Hero Section -->
-  <header class="hero-section-ly text-white d-flex align-items-start align-items-md-center justify-content-left text-left pt-4 pt-md-0 px-4 px-md-5">
+  <header class="hero-section text-white d-flex align-items-start align-items-md-top justify-content-left text-left py-5 pt-md-6 px-4 px-md-5">
    <div class="container px-0 px-md-5">
 	   	<div class="section row px-3 px-md-5">
-    <h1 class="mb-3 text-white">
+    <h1 class="mb-3 blue-title">
      Lymited
     </h1>
 			
@@ -95,14 +103,14 @@
    <!-- Main Sections -->
   <div class="container">
 	  
-   <div class="section row align-items-center py-5 ps-md-5 section-1">
+   <div class="section row align-items-center py-5 ps-md-5 section-white">
     <div class="col-12 d-md-none mb-3 xtrawrap-right">
      <h2 class="px-4">
          Client Overview
      </h2>
     </div>
     <div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
-     <img alt="The Client" class="img-fluid rounded-0 clickable-image" src="images/ly-client-overview.png" data-caption="A holding page for the Lymited website" />
+     <img alt="The Client" class="img-fluid rounded-0" src="images/ly-client-overview.png" />
     </div>
 		<div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
 
@@ -116,14 +124,14 @@
      </p>
     </div>
    </div>
-   <div class="section row align-items-center py-5 pe-md-5 section-2">
+   <div class="section row align-items-center py-5 pe-md-5 section-light-blue">
     <div class="col-12 d-md-none mb-3 xtrawrap-left">
      <h2 class="px-4">
       The Project
      </h2>
     </div>
     <div class="col-12 col-md-6 order-1 order-md-1 mb-3 mb-md-0">
-     <img alt="The Project" class="img-fluid rounded-0 clickable-image" src="images/ly-the-project.jpg" data-caption="A wireframe for reviewing an order with explanation notes"/>
+     <img alt="The Project" class="img-fluid rounded-0" src="images/ly-the-project.jpg"/>
     </div>
     <div class="col-12 col-md-6 order-2 order-md-2 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-left">
      <h2 class="d-none d-md-block px-5">
@@ -149,14 +157,14 @@
      </p>
     </div>
    </div>
-   <div class="section row align-items-center py-5 ps-md-5 section-3">
+   <div class="section row align-items-center py-5 ps-md-5 section-white">
     <div class="col-12 d-md-none mb-3 xtrawrap-right">
      <h2 class="px-4">
         Design System Foundations
      </h2>
     </div>
     <div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
-     <img alt="The Design System" class="img-fluid rounded-0 clickable-image" src="images/ly-design-system2.png" data-caption="Related products section on all devices"/>
+     <img alt="The Design System" class="img-fluid rounded-0" src="images/ly-design-system2.png"/>
     </div>
     <div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-right">
      <h2 class="d-none d-md-block px-5">
@@ -175,14 +183,14 @@
    </div>
 
 <!-- START: Section 4 -->
-   <div class="section row align-items-center py-5 pe-md-5 section-4">
+   <div class="section row align-items-center py-5 pe-md-5 section-grey">
     <div class="col-12 d-md-none mb-3 xtrawrap-left">
      <h2 class="px-4">
          Translating Complexity into Clarity
      </h2>
     </div>
     <div class="col-12 col-md-6 order-1 order-md-1 mb-3 mb-md-0">
-     <img alt="Consistency of Experience" class="img-fluid rounded-0 clickable-image" src="images/ly-complexity-clarity.jpg" data-caption="Tokenise Assets details for managing assets"/>
+     <img alt="Consistency of Experience" class="img-fluid rounded-0" src="images/ly-complexity-clarity.jpg"/>
     </div>
     <div class="col-12 col-md-6 order-2 order-md-2 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-left">
      <h2 class="d-none d-md-block px-5">
@@ -209,14 +217,14 @@
 	  
       
 <!-- START: Section 5 -->
-   <div class="section row align-items-center py-5 ps-md-5 section-5">
+   <div class="section row align-items-center py-5 ps-md-5 section-white">
     <div class="col-12 d-md-none mb-3 xtrawrap-right">
      <h2 class="px-4">
          Cross-Disciplinary Mentorship &amp; Collaboration
      </h2>
     </div>
     <div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
-     <img alt="Professional, Effective Apps &amp; Websites" class="img-fluid rounded-0 clickable-image" src="images/ly-mentorship.jpg" data-caption="My Purchases section"/>
+     <img alt="Professional, Effective Apps &amp; Websites" class="img-fluid rounded-0" src="images/ly-mentorship.jpg"/>
     </div>
     <div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center px-md-5 xtrawrap-right">
      <h2 class="d-none d-md-block px-5">
@@ -234,23 +242,22 @@
    <!-- END: Section 5 -->
    
    <!-- START: Section 6 -->
-      <div class="section row align-items-center py-5 pe-md-5 section-4">
+      <div class="section row align-items-center py-5 pe-md-5 section-blue">
        <div class="col-12 d-md-none mb-3 xtrawrap-left">
-        <h2 class="px-4">
+        <h2 class="px-4 text-white">
             Impact & Outcome
         </h2>
        </div>
        <div class="col-12 col-md-6 order-1 order-md-1 mb-3 mb-md-0">
-        <img alt="Lymited Product Page" class="img-fluid rounded-0 clickable-image" src="images/ly-impact-outcome.jpg"
-        data-caption="The main product page on desktop and mobile" />
+        <img alt="Consistency of Experience" class="img-fluid rounded-0" src="images/ly-impact-outcome.jpg"/>
        </div>
        <div class="col-12 col-md-6 order-2 order-md-2 d-flex flex-column justify-content-center px-md-5 py-md-5 xtrawrap-left">
-        <h2 class="d-none d-md-block px-5">
+        <h2 class="d-none d-md-block px-5 text-white">
             Impact & Outcome
         </h2>
-        <p class="px-4 px-md-5 pt-4 pb-2 py-md-1">Though Lymited was ultimately only live for a short time, the project remains one of my most transformative. I helped define the product, shape the brand, and lay down the culture of collaboration within a fully remote, fast-paced team.</p>
+        <p class="px-4 px-md-5 pt-4 pb-2 py-md-1 text-white">Though Lymited was ultimately only live for a short time, the project remains one of my most transformative. I helped define the product, shape the brand, and lay down the culture of collaboration within a fully remote, fast-paced team.</p>
 
-        <p class="px-4 px-md-5 pt-4 pb-2 py-md-1">It was a project that demanded systems thinking, creative clarity, and high adaptability, and left behind a blueprint for how to build premium, complex digital products in uncertain times.</p>
+        <p class="px-4 px-md-5 pt-4 pb-2 py-md-1 text-white">It was a project that demanded systems thinking, creative clarity, and high adaptability, and left behind a blueprint for how to build premium, complex digital products in uncertain times.</p>
 
    
        </div>
@@ -270,16 +277,7 @@
    </footer>
   </div>
   <!-- END: Footer -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
-
-  <div id="lightbox-overlay">
-    <button id="lightbox-close">&times;</button>
-    <img src="" alt="Enlarged image">
-        <p id="lightbox-caption"></p>
-  </div>
-  
-  <script src="js/lightbox.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
  </body>
 </html>
